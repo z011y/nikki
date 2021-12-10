@@ -1,22 +1,37 @@
 import React from "react";
 import Link from "next/link";
-import { styled, theme } from "../stitches.config";
+import { useRouter } from "next/router";
+import { styled } from "../stitches.config";
 
 type LayoutProps = {
   children: React.ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  const router = useRouter();
+  const activeStyle = {
+    color: "#F76808",
+  };
+
   return (
     <div>
       <Header>
-        <h1 style={{ color: theme.colors.primary, fontSize: "24px" }}>NIKKI</h1>
+        <Link href="/">
+          <a>
+            <Logo>NIKKI</Logo>
+          </a>
+        </Link>
         <LinksWrapper>
+          <Link href="/">
+            <a style={router.pathname === "/" ? activeStyle : {}}>Home</a>
+          </Link>
           <Link href="/about">
-            <a>About</a>
+            <a style={router.pathname === "/about" ? activeStyle : {}}>About</a>
           </Link>
           <Link href="/projects">
-            <a>Projects</a>
+            <a style={router.pathname === "/projects" ? activeStyle : {}}>
+              Projects
+            </a>
           </Link>
         </LinksWrapper>
       </Header>
@@ -32,8 +47,7 @@ const Main = styled("main", {
   flexDirection: "column",
 
   "@bp1": {
-    paddingTop: "130px",
-    paddingLeft: "32px",
+    paddingTop: "114px",
   },
 });
 
@@ -41,10 +55,10 @@ const LinksWrapper = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  width: "256px",
 
   a: {
     fontSize: "14px",
+    marginLeft: "32px",
   },
 });
 
@@ -53,10 +67,19 @@ const Header = styled("header", {
   alignItems: "center",
   justifyContent: "space-between",
   padding: "32px",
+  paddingBottom: "16px",
   backgroundColor: "$accent",
+  borderBottom: "1px solid #FFDCC3",
   color: "$text",
   position: "fixed",
   top: 0,
   left: 0,
   width: "100%",
+  zIndex: 1,
+});
+
+const Logo = styled("h1", {
+  color: "$primary",
+  fontSize: "18px",
+  letterSpacing: "-1px",
 });

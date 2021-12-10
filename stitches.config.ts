@@ -35,6 +35,7 @@ export const {
       5: "20px",
       6: "24px",
       7: "32px",
+      8: "48px",
     },
     fonts: {
       normal: '"Poppins", apple-system, sans-serif',
@@ -80,16 +81,15 @@ export const globalStyles = globalCss({
     fontSize: theme.fontSizes[4],
     textDecoration: "none",
     color: theme.colors.text,
-    letterSpacing: "0.1em",
+    letterSpacing: "0",
   },
   h1: {
-    fontSize: theme.fontSizes[7],
+    fontSize: theme.fontSizes[8],
     fontFamily: theme.fonts.serif,
     fontWeight: "900",
     letterSpacing: "-1.8px",
     marginBlockStart: 0,
     marginBlockEnd: 0,
-    width: "100%",
   },
   h2: {
     fontSize: theme.fontSizes[4],
