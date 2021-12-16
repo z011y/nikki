@@ -12,23 +12,24 @@ const About = () => {
         padding: "0px 32px",
         display: "grid",
         gridTemplateColumns: "2fr 1fr",
+        gridGap: "128px",
+        height: "calc(100vh - 106px)",
       }}
     >
-      <div style={{ paddingRight: "128px" }}>
+      <div>
         <h1>About Me</h1>
-        <p>
-          I'm originally a transfer student from the University of California,
-          Santa Cruz. Though I was thrilled to be going to a UC, I quickly
-          discovered the hands-on research I was so desperately eager to
-          participate in was reserved for graduate students. Thankfully, I soon
-          found my place at Utah Valley University where I was given numerous
-          opportunities to get my hands dirty and ended up excelling in both my
-          biotechnology and microbiology courses. <br /> <br /> Though I
-          obviously thoroughly enjoy my schooling, I am also happy to share my
-          life with my new husband whom I've been dating for six years, and
-          recently married in May 2021 and our dog named Piper. My favorite
-          season to spend with them is the Fall. This is the best time of year
-          for us all to go hiking and enjoy pumpkin flavored treats.{" "}
+        <p style={{ fontSize: "20px" }}>
+          I’m a Biotechnology undergrad student at Utah Valley University and I
+          am expected to graduate in Spring of 2022! When I’m not studying or at
+          my internship at InnovaBio, I spend much of my free-time with my
+          husband, Cameron, and playing with my dog, Piper! I’m originally from
+          Northern California and though I do miss the sequoia trees and the
+          warm beach days, Utah surprisingly feels like home.
+          <br /> <br />
+          My next steps for the future are to graduate with my B.S. in
+          Biotechnology and a Minor in Biology from UVU and then I plan to move
+          to Salt Lake City to pursue further education at the University of
+          Utah!
         </p>
         <Link href="/projects">
           <a>

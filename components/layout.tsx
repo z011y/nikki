@@ -36,6 +36,26 @@ const Layout = ({ children }: LayoutProps) => {
         </LinksWrapper>
       </Header>
       <Main>{children}</Main>
+      <Footer>
+        <Link href="/">
+          <a>
+            <Logo>NIKKI</Logo>
+          </a>
+        </Link>
+        <LinksWrapper>
+          <Link href="/">
+            <a style={router.pathname === "/" ? activeStyle : {}}>Home</a>
+          </Link>
+          <Link href="/about">
+            <a style={router.pathname === "/about" ? activeStyle : {}}>About</a>
+          </Link>
+          <Link href="/projects">
+            <a style={router.pathname === "/projects" ? activeStyle : {}}>
+              Projects
+            </a>
+          </Link>
+        </LinksWrapper>
+      </Footer>
     </div>
   );
 };
@@ -82,4 +102,19 @@ const Logo = styled("h1", {
   color: "$primary",
   fontSize: "18px",
   letterSpacing: "-1px",
+});
+
+const Footer = styled("footer", {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: "64px",
+  backgroundColor: "$accent",
+  borderTop: "1px solid #FFDCC3",
+  height: "33vh",
+
+  "a:first-child": {
+    margin: "0px",
+  },
 });

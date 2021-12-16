@@ -19,12 +19,13 @@ export default function Home() {
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           alignItems: "center",
+          justifyItems: "center",
           marginBottom: "32px",
         }}
       >
         <Head>
           <title>Nicole Couture</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
 
         <Title>
@@ -39,7 +40,7 @@ export default function Home() {
             </p>
             <h1
               style={{
-                color: "#F76809",
+                // color: "#F76809",
                 marginBlockStart: "0",
                 marginBlockEnd: "0",
               }}
@@ -68,7 +69,7 @@ export default function Home() {
       <section
         style={{
           backgroundColor: "#FFF1E7",
-          minHeight: "calc(100vh - 72px)",
+          // minHeight: "calc(100vh - 72px)",
           padding: "128px 256px",
           position: "relative",
           borderTop: "1px solid #FFDCC3",
@@ -89,27 +90,20 @@ export default function Home() {
         <h1 style={{ color: "#F76809", marginBottom: "12px" }}>
           Utah Valley University
         </h1>
-        <h4>○ Associate of Science in Biology </h4>
-        <p style={{ marginBlockStart: "0" }}>
-          In Spring of 2021 I received my Associate of Science degree in
-          Biology. This was important for me to achieve because I spent much of
-          this time focusing my studies towards cell biology and biological
-          evolution during this time.
-        </p>
-        <h4>○ Bachelor of Science in Biotechnology</h4>
-        <p style={{ marginBlockStart: "0" }}>
-          I'm currently in my Senior year working towards my Bachelor's degree
-          in Biotechnology. My focuses for this degree are protein purification
-          and amplification, bacterial transformation, and nucleic acid
-          manipulation.
-        </p>
-        <h4>○ Bachelor of Science with a Minor in Biology </h4>
-        <p style={{ marginBlockStart: "0" }}>
-          In order to receive my minor, I'm focusing my studies in relation to
-          embryology and biological development. In order to do this, I've taken
-          courses in relation to this topic and used chicken fetal cells in lab
-          to produce results relating to their population doubling time.{" "}
-        </p>
+        <h4>
+          ○ Associate of Science in Biology <em>(recieved May 2021)</em>{" "}
+        </h4>
+
+        <h4>
+          ○ Bachelor of Science in Biotechnology, Minor in Biology{" "}
+          <em>(expected May 2022)</em>
+        </h4>
+        <h1
+          style={{ color: "#F76809", marginBottom: "12px", marginTop: "32px" }}
+        >
+          University of California Santa Cruz
+        </h1>
+        <h4>○ Proposed Major: Biochem & Molecular Biology</h4>
       </section>
       <section
         style={{
@@ -127,22 +121,41 @@ export default function Home() {
             marginBlockEnd: "0",
           }}
         >
-          ACCOMPLISHMENTS ↓
+          EXPERIENCE ↓
         </h2>
         <h1 style={{ color: "#F76809", marginBottom: "12px" }}>InnovaBio</h1>
-        <h4>○ Research Associate Intern </h4>
+        <h4>○ Research & Development Intern </h4>
         <p style={{ marginBlockStart: "0" }}>
-          InnovaBio is a biotechnology laboratory on campus that has allowed me
-          the opportunities to work on projects relating to the study of
-          Alzheimer's Disease, testing the cell toxicity of specific solutions,
-          and working with Utah CSI for a classified project.
+          - Studied the development of Alzheimer’s caused by mutations in
+          amyloid precursor proteins through protein-protein interaction
+          networks
+          <br />
+          - Performed cellular and molecular biology techniques such as
+          transfection, mutagenesis, qPCR, PCR, and nucleic acid purification
+          <br />
+          - Prepared technical reports, summaries, protocols, and quantitative
+          analyses
+          <br />- Maintained hepatocellular carcinoma and COS adhesion cell
+          lines
         </p>
-        <h4>○ Intern Scholarship</h4>
+        <h4>○ Cell-Based Assay Development</h4>
         <p style={{ marginBlockStart: "0" }}>
-          Due to my internship being unpaid, I recently applied for an
-          internship to help supply textbooks and other resources during my time
-          as a student. My application was accepted and I was awarded a partial
-          scholarship.
+          - Performed cell-based viability assays on essential oil compounds
+          <br />
+          - Maintained cultures of multiple human dermal fibroblast cells lines
+          <br />
+          - Troubleshot and optimized assays through data interpretation
+          <br />- Independently planned and executed experiments
+        </p>
+        <h4>○ Laboratory Research Assistant</h4>
+        <p style={{ marginBlockStart: "0" }}>
+          - Operated and maintained an anaerobic chamber
+          <br />
+          - Prepared vaginal microbial samples for analysis
+          <br />
+          - Developed lab protocols and SOP’s
+          <br />- Maintained detailed logs of experiments and reported
+          scientific findings
         </p>
       </section>
     </>
@@ -158,7 +171,12 @@ const Title = styled("div", {
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  transform: "translateY(-72px)",
+  transform: "translateY(-32px)",
+  // backgroundColor: "#FFF1E7",
+  // border: "1px solid #FFDCC3",
+  borderRadius: "16px",
+  width: "fit-content",
+  // padding: "32px",
 });
 
 const Illustration = styled("img", {
